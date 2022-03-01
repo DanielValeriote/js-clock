@@ -1,0 +1,17 @@
+:root {
+  --bg-color: #191919;
+  --green: #00FF97;
+  --gray: #8A8A8A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
