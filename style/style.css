@@ -58,4 +58,10 @@ body {
 .active {
   color: #00FF97;
 }
+
+#clock {
+  color: #00FF97;
+  font-size: 10rem;
+  font-weight: normal;
+}
 /*# sourceMappingURL=style.css.map */
