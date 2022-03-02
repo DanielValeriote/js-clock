@@ -52,3 +52,15 @@ body {
   font-size: 10rem;
   font-weight: normal;
 }
+
+.hour-format {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 120px;
+  color: $secondary;
+  font-size: 2rem;
+  & > * {
+    cursor: pointer;
+  }
+}

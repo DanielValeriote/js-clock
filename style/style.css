@@ -64,4 +64,22 @@ body {
   font-size: 10rem;
   font-weight: normal;
 }
+
+.hour-format {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  gap: 120px;
+  color: #8A8A8A;
+  font-size: 2rem;
+}
+
+.hour-format > * {
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
