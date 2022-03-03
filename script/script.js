@@ -60,8 +60,10 @@ const setClock = (h, m, s) => {
     if (h > 12) {
       newHour = h - 12;
       newHour = newHour < 10 ? "0" + newHour : newHour;
+      clock.innerText = `${newHour}:${treatedM}:${treatedS} PM`;
+    } else {
+      clock.innerText = `${newHour}:${treatedM}:${treatedS} AM`;
     }
-    clock.innerText = `${newHour}:${treatedM}:${treatedS} PM`;
   }
 };
 
