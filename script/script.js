@@ -1,6 +1,3 @@
-const day = new Date().getDay();
-setDay(day);
-
 let hourFormat = "24h";
 if (hourFormat == "24h") {
   addClassActive("24h");
@@ -45,6 +42,9 @@ const setDay = (d) => {
       alert("Error, day of the week could not be obtained");
   }
 };
+
+const day = new Date().getDay();
+setDay(day);
 
 const setClock = (h, m, s) => {
   const clock = document.getElementById("clock");
