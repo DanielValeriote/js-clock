@@ -1,11 +1,6 @@
 let hourFormat = "24h";
-if (hourFormat == "24h") {
-  addClassActive("24h");
-  removeClassActive("12h");
-} else {
-  addClassActive("12h");
-  removeClassActive("24h");
-}
+addClassActive("24h");
+removeClassActive("12h");
 
 function addClassActive(id) {
   document.getElementById(id).classList.add("active");
@@ -16,6 +11,9 @@ function removeClassActive(id) {
 }
 
 const setDay = (d) => {
+  document.querySelectorAll(".day").forEach(day => {
+    day.classList.remove("active");
+  });
   switch (d) {
     case 0:
       document.getElementById("sunday").classList.add("active");
@@ -64,6 +62,11 @@ const setClock = (h, m, s) => {
     } else {
       clock.innerText = `${newHour}:${treatedM}:${treatedS} AM`;
     }
+    if(h === 23 && m === 59 && s >= 59) {
+      setTimeout(()=> {
+        setDay(new Date().getDay())
+      }, 2000)
+    }
   }
 };
 
@@ -75,7 +78,7 @@ const updateClock = () => {
   setClock(hour, min, sec);
 };
 
-setInterval(updateClock, 1000);
+setInterval(updateClock, 100);
 
 function setTwelve() {
   hourFormat = "12h";
