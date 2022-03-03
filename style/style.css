@@ -62,9 +62,10 @@ body {
 
 #clock {
   color: #00FF97;
-  font-size: 9rem;
+  font-size: 7rem;
   font-weight: normal;
   letter-spacing: 5px;
+  white-space: nowrap;
 }
 
 .hour-format {
@@ -97,6 +98,9 @@ body {
   }
   .active {
     display: unset;
+  }
+  #clock {
+    font-size: 5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

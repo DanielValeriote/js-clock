@@ -50,9 +50,10 @@ body {
 
 #clock {
   color: $primary;
-  font-size: 9rem;
+  font-size: 7rem;
   font-weight: normal;
   letter-spacing: 5px;
+  white-space: nowrap;
 }
 
 .hour-format {
@@ -78,5 +79,8 @@ body {
   }
   .active {
     display: unset;
+  }
+  #clock {
+    font-size: 5rem;
   }
 }
